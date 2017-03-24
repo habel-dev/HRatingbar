@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="IRatingBarLayout">
+        <attr name="barHeight" format="dimension" />
+        <attr name="barMaxHeight" format="dimension" />
+        <attr name="barMinHeight" format="dimension" />
+        <attr name="barWidth" format="dimension" />
+        <attr name="readOnly" format="boolean" />
+        <attr name="halfRating" format="boolean" />
+        <attr name="rating" format="float" />
+        <attr name="stepSize" format="float" />
+        <attr name="ratingMax" format="integer" />
+        <attr name="padding" format="dimension" />
+        <attr name="compressOnDemand" format="boolean" />
+    </declare-styleable>
+</resources>

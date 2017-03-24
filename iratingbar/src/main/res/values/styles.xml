@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ir_image">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:contentDescription">rating image</item>
+        <item name="android:src">@android:drawable/star_on</item>
+    </style>
+
+    <style name="ir_layout">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="ir_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+</resources>

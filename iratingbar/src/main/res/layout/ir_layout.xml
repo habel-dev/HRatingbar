@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ir_image_1"
+        style="@style/ir_image"
+        android:contentDescription="@string/app_name" />
+
+    <ImageView
+        android:id="@+id/ir_image_2"
+        style="@style/ir_image"
+        android:layout_toEndOf="@+id/ir_image_1"
+        android:layout_toRightOf="@+id/ir_image_1"
+        android:contentDescription="@string/app_name" />
+
+    <ImageView
+        android:id="@+id/ir_image_3"
+        style="@style/ir_image"
+        android:layout_toEndOf="@+id/ir_image_2"
+        android:layout_toRightOf="@+id/ir_image_2"
+        android:contentDescription="@string/app_name" />
+
+    <ImageView
+        android:id="@+id/ir_image_4"
+        style="@style/ir_image"
+        android:layout_toEndOf="@+id/ir_image_3"
+        android:layout_toRightOf="@+id/ir_image_3"
+        android:contentDescription="@string/app_name" />
+
+    <ImageView
+        android:id="@+id/ir_image_5"
+        style="@style/ir_image"
+        android:layout_toEndOf="@+id/ir_image_4"
+        android:layout_toRightOf="@+id/ir_image_4"
+        android:contentDescription="@string/app_name" />
+
+    <ImageView
+        android:id="@+id/ir_image_6"
+        style="@style/ir_image"
+        android:layout_toEndOf="@+id/ir_image_5"
+        android:layout_toRightOf="@+id/ir_image_5"
+        android:contentDescription="@string/app_name" />
+
+    <ImageView
+        android:id="@+id/ir_image_7"
+        style="@style/ir_image"
+        android:layout_toEndOf="@+id/ir_image_6"
+        android:layout_toRightOf="@+id/ir_image_6"
+        android:contentDescription="@string/app_name" />
+
+    <ImageView
+        android:id="@+id/ir_image_8"
+        style="@style/ir_image"
+        android:layout_toEndOf="@+id/ir_image_7"
+        android:layout_toRightOf="@+id/ir_image_7"
+        android:contentDescription="@string/app_name" />
+
+    <ImageView
+        android:id="@+id/ir_image_9"
+        style="@style/ir_image"
+        android:layout_toEndOf="@+id/ir_image_8"
+        android:layout_toRightOf="@+id/ir_image_8"
+        android:contentDescription="@string/app_name" />
+
+    <ImageView
+        android:id="@+id/ir_image_10"
+        style="@style/ir_image"
+        android:layout_toEndOf="@+id/ir_image_9"
+        android:layout_toRightOf="@+id/ir_image_9"
+        android:contentDescription="@string/app_name" />
+</RelativeLayout>

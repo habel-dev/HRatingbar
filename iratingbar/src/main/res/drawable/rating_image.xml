@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/gradientDrawble"
+        android:drawable="@drawable/ir1" />
+    <item
+        android:id="@+id/gradientDrawble1"
+        android:drawable="@drawable/rating_image1" />
+
+
+</layer-list>
