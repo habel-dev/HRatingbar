@@ -19,6 +19,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
@@ -198,6 +199,12 @@ public class IRatingBarLayout extends IRatingBar implements View.OnTouchListener
 
     public IRatingBarLayout setResource(List<RatingResource> resource) {
         images = resource;
+        return this;
+    }
+
+    public IRatingBarLayout addResource(RatingResource resource) {
+        if (images == null) images = new ArrayList<>();
+        images.add(resource);
         return this;
     }
 
