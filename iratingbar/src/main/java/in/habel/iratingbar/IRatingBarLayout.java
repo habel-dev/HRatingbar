@@ -121,7 +121,7 @@ public class IRatingBarLayout extends IRatingBar implements View.OnTouchListener
         update();
     }
 
-    private IRatingBarLayout update() {
+    public IRatingBarLayout update() {
         for (int i = 0; i < bar.getChildCount(); i++) {
             try {
                 processImages((ImageView) bar.getChildAt(i), i);
