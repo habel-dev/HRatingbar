@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.habelmarottipuzha'
 
 android {
     signingConfigs {
@@ -43,7 +45,6 @@ dependencies {
 }
 
 configurations.all {
-
     resolutionStrategy.eachDependency { details ->
         def requested = details.requested
         if (requested.group == 'com.android.support') {
