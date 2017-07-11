@@ -24,7 +24,7 @@ import java.util.List;
  */
 
 @SuppressWarnings("UnusedReturnValue")
-public abstract class IRatingBar extends RelativeLayout {
+abstract class IRatingBar extends RelativeLayout {
     static final String TAG = "IRatingBar";
     float rating;
     float prevRating;

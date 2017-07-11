@@ -6,13 +6,22 @@
     android:layout_height="match_parent"
     tools:context="in.habel.hratingbar.MainActivity">
 
+    <TextView
+        android:id="@+id/rated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Rated : 1"
+        android:textSize="28sp" />
+
     <in.habel.iratingbar.IRatingBarLayout
+        android:id="@+id/iRatingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         app:barHeight="60dp"
         app:barWidth="50dp"
-        app:rating="3"
+        app:rating="1"
         app:ratingMax="5" />
 
 </FrameLayout>
