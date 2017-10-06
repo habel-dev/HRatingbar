@@ -197,6 +197,13 @@ public class IRatingBarLayout extends IRatingBar implements View.OnTouchListener
         }
     }
 
+    public IRatingBarLayout setResource(RatingResource resource) {
+        List<RatingResource> ratingResourceList = new ArrayList<>();
+        ratingResourceList.add(resource);
+        images = ratingResourceList;
+        return this;
+    }
+
     public IRatingBarLayout setResource(List<RatingResource> resource) {
         images = resource;
         return this;

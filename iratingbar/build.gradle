@@ -9,17 +9,19 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    buildToolsVersion "26.0.2"
 
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "1.0.3"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
     }
-    dataBinding { enabled = true }
+    dataBinding {
+        true
+    }
     buildTypes {
         release {
             // shrinkResources true
@@ -34,18 +36,6 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:26.0.1'
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.databinding:baseLibrary:2.5.0-alpha-preview-02'
 }
-/*
-
-configurations.all {
-
-    resolutionStrategy.eachDependency { details ->
-        def requested = details.requested
-        if (requested.group == 'com.android.support') {
-            if (!requested.name.startsWith("multidex")) {
-                details.useVersion '26.0.0-alpha1'
-            }
-        }
-    }
-}*/
