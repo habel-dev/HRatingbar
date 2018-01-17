@@ -4,6 +4,7 @@ package in.habel.iratingbar;
  * Created by habel on 22-Jan-17.
  */
 
+@SuppressWarnings("WeakerAccess")
 public class RatingResource {
     private int ratingEmpty;
     private int ratingFull;
