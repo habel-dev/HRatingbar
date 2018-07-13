@@ -39,6 +39,7 @@ abstract class IRatingBar extends RelativeLayout {
     boolean readOnly;
     int ratingMax;
     List<RatingResource> images = new ArrayList<>();
+    private int displayWidth = -1;
 
     public IRatingBar(Context context) {
         super(context);
@@ -68,12 +69,14 @@ abstract class IRatingBar extends RelativeLayout {
     }
 
     int getDisplayWidth(Context context) {
+        if (displayWidth != -1) return displayWidth;
         WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         Display display = wm.getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
+        displayWidth = Math.min(size.x, size.y);
         Log.d(TAG, String.format("getDisplayWidth() width:%1$s   height:%2$s", size.x, size.y));
-        return Math.min(size.x, size.y);
+        return displayWidth;
     }
 
     Bitmap generateDrawable(float threshold, int empty, int full) {
@@ -127,6 +130,13 @@ abstract class IRatingBar extends RelativeLayout {
         addResource(new RatingResource(R.drawable.ir4, R.drawable.ir4c));
         addResource(new RatingResource(R.drawable.ir6, R.drawable.ir6c));
         addResource(new RatingResource(R.drawable.ir8, R.drawable.ir8c));
+        addResource(new RatingResource(R.drawable.ir10, R.drawable.ir10c));
+    }
+
+    void addDefault3Resources() {
+        images = new ArrayList<>();
+        addResource(new RatingResource(R.drawable.ir2, R.drawable.ir2c));
+        addResource(new RatingResource(R.drawable.ir6, R.drawable.ir6c));
         addResource(new RatingResource(R.drawable.ir10, R.drawable.ir10c));
     }
 

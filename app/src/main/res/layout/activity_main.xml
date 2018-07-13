@@ -22,6 +22,6 @@
         app:barHeight="60dp"
         app:barWidth="50dp"
         app:rating="1"
-        app:ratingMax="5" />
+        app:ratingMax="3" />
 
 </FrameLayout>

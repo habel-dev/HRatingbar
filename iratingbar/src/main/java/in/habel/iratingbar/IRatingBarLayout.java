@@ -52,7 +52,9 @@ public class IRatingBarLayout extends IRatingBar implements View.OnTouchListener
         if (rating < 0 || rating > ratingMax) rating = 0;
         Log.d(TAG, String.format("ratingMax:%1$2s   rating:%2$s   imageWidth:%3$s  imageHeight:%4$s   imageMinHeight:%5$s   imageMaxHeight:%6$s", ratingMax, rating, imageWidth, imageHeight, imageMinHeight, imageMaxHeight));
         Log.d(TAG, String.format("dpToPixels(40):%1$s", dpToPixels(40)));
-        if (ratingMax * imageMinHeight > getDisplayWidth(context) - dpToPixels(40)) {
+        compressOnDemand = a.getBoolean(R.styleable.IRatingBarLayout_compressOnDemand, true);
+
+        if (compressOnDemand && (ratingMax * imageMinHeight > getDisplayWidth(context) - dpToPixels(40))) {
             ratingMax /= 2;
             stepSize /= 2;
             rating /= 2;
@@ -60,7 +62,6 @@ public class IRatingBarLayout extends IRatingBar implements View.OnTouchListener
             Log.d(TAG, String.format("ratingMax:%1$2s   rating:%2$s   imageWidth:%3$s  imageHeight:%4$s   imageMinHeight:%5$s   imageMaxHeight:%6$s", ratingMax, rating, imageWidth, imageHeight, imageMinHeight, imageMaxHeight));
         }
         prevRating = rating;
-        compressOnDemand = a.getBoolean(R.styleable.IRatingBarLayout_compressOnDemand, true);
 
         barPadding = a.getDimensionPixelSize(R.styleable.IRatingBarLayout_padding, 0);
         a.recycle();
@@ -69,7 +70,8 @@ public class IRatingBarLayout extends IRatingBar implements View.OnTouchListener
         inflater.inflate(R.layout.ir_layout, this, true);
         bar = (ViewGroup) getChildAt(0);
         if (images.size() == 0)
-            if (ratingMax <= 5) addDefaultHalfResources();
+            if (ratingMax <= 3) addDefault3Resources();
+            else if (ratingMax <= 5) addDefaultHalfResources();
             else addDefaultSmileyResources();
 
         for (int i = 0; i < bar.getChildCount(); i++) {
