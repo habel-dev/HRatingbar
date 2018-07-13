@@ -135,8 +135,8 @@ abstract class IRatingBar extends RelativeLayout {
 
     void addDefault3Resources() {
         images = new ArrayList<>();
-        addResource(new RatingResource(R.drawable.ir2, R.drawable.ir2c));
-        addResource(new RatingResource(R.drawable.ir6, R.drawable.ir6c));
+        addResource(new RatingResource(R.drawable.ir2, R.drawable.ir4c));
+        addResource(new RatingResource(R.drawable.ir6, R.drawable.ir7c));
         addResource(new RatingResource(R.drawable.ir10, R.drawable.ir10c));
     }
 

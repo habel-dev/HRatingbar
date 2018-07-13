@@ -46,7 +46,7 @@ public class IRatingBarLayout extends IRatingBar implements View.OnTouchListener
         imageWidth = a.getDimensionPixelSize(R.styleable.IRatingBarLayout_barWidth, 0);
         stepSize = a.getFloat(R.styleable.IRatingBarLayout_stepSize, 1f);
         if (stepSize <= 0 || stepSize >= 1) stepSize = 1;
-        ratingMax = a.getInt(R.styleable.IRatingBarLayout_ratingMax, 10);
+        ratingMax = a.getInt(R.styleable.IRatingBarLayout_ratingMax, 5);
         if (ratingMax > 10 || ratingMax <= 0) ratingMax = 10;
         rating = a.getFloat(R.styleable.IRatingBarLayout_rating, 0);
         if (rating < 0 || rating > ratingMax) rating = 0;
@@ -69,14 +69,14 @@ public class IRatingBarLayout extends IRatingBar implements View.OnTouchListener
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         inflater.inflate(R.layout.ir_layout, this, true);
         bar = (ViewGroup) getChildAt(0);
-        if (images.size() == 0)
+       /* if (images.size() == 0)
             if (ratingMax <= 3) addDefault3Resources();
             else if (ratingMax <= 5) addDefaultHalfResources();
             else addDefaultSmileyResources();
 
         for (int i = 0; i < bar.getChildCount(); i++) {
             processImages((ImageView) bar.getChildAt(i), i);
-        }
+        }*/
         if (!readOnly)
             bar.setOnTouchListener(this);
 
@@ -124,6 +124,9 @@ public class IRatingBarLayout extends IRatingBar implements View.OnTouchListener
     }
 
     public IRatingBarLayout update() {
+        if (ratingMax <= 3) addDefault3Resources();
+        else if (ratingMax <= 5) addDefaultHalfResources();
+        else addDefaultSmileyResources();
         for (int i = 0; i < bar.getChildCount(); i++) {
             try {
                 processImages((ImageView) bar.getChildAt(i), i);
